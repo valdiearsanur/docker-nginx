@@ -46,12 +46,18 @@ jobs:
 
   create-instance-template:
 
+    runs-on: ubuntu-latest
+    steps:
+
     - name: Create Instance Template
       run: |-
         gcloud compute instance-templates create-with-container $INSTANCE_TEMPLATE_NAME \
           --container-image gcr.io/$IMAGE_NAME:latest
 
   execute-mig-updater:
+
+    runs-on: ubuntu-latest
+    steps:
 
     - name: Update Managed Instance Group
       run: |-
