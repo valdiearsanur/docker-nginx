@@ -3,7 +3,7 @@ name: Docker Image CI
 on:
   push:
     branches:
-      - master
+      - main
 
 env:
   IMAGE_NAME: ${{ secrets.GCP_PROJECT_ID }}/basic-nginx
